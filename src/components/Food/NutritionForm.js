@@ -59,7 +59,7 @@ let user;
 
 async function fetchUser() {
   try {
-    const response = await fetch(`http://localhost:3001/api/user/getUserById/${userId}`, {
+    const response = await fetch(`http://54.86.232.234:3000/api/user/getUserById/${userId}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -334,7 +334,7 @@ const NutritionForm = () => {
     // Run an update call here
     try {
       // Send the updated meal data to the backend
-      const response = await fetch(`http://localhost:3001/api/meal/update-meal/${selectedSectionItem._id}`, {
+      const response = await fetch(`http://54.86.232.234:3000/api/meal/update-meal/${selectedSectionItem._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -413,7 +413,7 @@ const getTotalMacros = () => {
 async function addMealRequest(mealData) {
   const selectedDate = formatDate(currentDate);
   try {
-    const response = await fetch(`http://localhost:3001/api/meal/log-meal/${userId}/?date=${selectedDate}`, {
+    const response = await fetch(`http://54.86.232.234:3000/api/meal/log-meal/${userId}/?date=${selectedDate}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -434,7 +434,7 @@ async function addMealRequest(mealData) {
 async function fetchMeals() {
   const selectedDate = formatDate(currentDate);
   try {
-      const response = await fetch(`http://localhost:3001/api/meal/get-meals/${userId}?date=${selectedDate}`, {
+      const response = await fetch(`http://54.86.232.234:3000/api/meal/get-meals/${userId}?date=${selectedDate}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

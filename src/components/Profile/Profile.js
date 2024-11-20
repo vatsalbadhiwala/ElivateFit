@@ -45,7 +45,7 @@ export default function Profile() {
       const decodedToken = jwtDecode(token)
       const userId = decodedToken._id
 
-      const response = await fetch(`http://localhost:3001/api/user/getUserById/${userId}`, {
+      const response = await fetch(`http://54.86.232.234:3000/api/user/getUserById/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -115,7 +115,7 @@ export default function Profile() {
   const handleSubmit = async () => {
     try {
       const token = localStorage.getItem('token')
-      const response = await fetch(`http://localhost:3001/api/user/updateUser/${user._id}`, {
+      const response = await fetch(`http://54.86.232.234:3000/api/user/updateUser/${user._id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

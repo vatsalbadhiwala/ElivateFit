@@ -50,7 +50,7 @@ export default function ProfileMenu() {
 
   const fetchUserData = async (userId, token) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/user/getUserById/${userId}`, {
+      const response = await fetch(`http://54.86.232.234:3000/api/user/getUserById/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

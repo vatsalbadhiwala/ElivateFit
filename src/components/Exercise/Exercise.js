@@ -105,7 +105,7 @@ function Exercise() {
     const exerciseData = { ...formData, calories, date };
 
     try {
-      const response = await fetch(`http://localhost:3001/api/user/log-exercise/${userId}`, {
+      const response = await fetch(`http://54.86.232.234:3000/api/user/log-exercise/${userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -48,7 +48,7 @@ function UserActivity() {
   const fetchUserData = async () => {
     try {
       // Replace 'user_id' with the actual user ID or fetch it from context/props
-      const response = await fetch(`http://localhost:3001/api/user/getUserById/${userId.id}`, {
+      const response = await fetch(`http://54.86.232.234:3000/api/user/getUserById/${userId.id}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -72,7 +72,7 @@ function UserActivity() {
   const handleEmailUpdate = async () => {
     try {
       // Replace 'user_id' with the actual user ID
-      const response = await fetch(`http://localhost:3001/api/user/updateUserEmail/${userId.id}`, {
+      const response = await fetch(`http://54.86.232.234:3000/api/user/updateUserEmail/${userId.id}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -105,7 +105,7 @@ function UserActivity() {
 
   const handlePasswordReset = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/auth/admin-reset-password', {
+      const response = await fetch('http://54.86.232.234:3000/api/auth/admin-reset-password', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

@@ -73,7 +73,7 @@ function Login() {
             })
 
             try {
-                const response = await fetch('http://localhost:3001/api/user/login', {
+                const response = await fetch('http://54.86.232.234:3000/api/user/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ function Login() {
                         isClosable: true,
                     })
                     if (data.data.userData.userType === "admin") {
-                        const otpResponse = await fetch('http://localhost:3001/api/auth/generate-otp', {
+                        const otpResponse = await fetch('http://54.86.232.234:3000/api/auth/generate-otp', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',

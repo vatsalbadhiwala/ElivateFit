@@ -135,7 +135,7 @@ function Dashboard() {
 
     const fetchProfile = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/api/user/getUserById/${userId}`, {
+            const response = await fetch(`http://54.86.232.234:3000/api/user/getUserById/${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },
@@ -164,7 +164,7 @@ function Dashboard() {
 
     const fetchExerciseLogs = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/api/user/get-exercise-logs/${userId}?date=${today}`, {
+            const response = await fetch(`http://54.86.232.234:3000/api/user/get-exercise-logs/${userId}?date=${today}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -189,7 +189,7 @@ function Dashboard() {
 
     const fetchDailyMacros = async () => {
         try {
-            const response = await fetch(`http://localhost:3001/api/meal/get-meals/${userId}?date=${today}`, {
+            const response = await fetch(`http://54.86.232.234:3000/api/meal/get-meals/${userId}?date=${today}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -234,7 +234,7 @@ function Dashboard() {
     const fetchHistoricalMacros = async () => {
         try {
             const response = await fetch(
-                `http://localhost:3001/api/meal/get-all-meals/${userId}`,
+                `http://54.86.232.234:3000/api/meal/get-all-meals/${userId}`,
                 {
                     method: 'GET',
                     headers: {

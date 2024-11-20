@@ -51,7 +51,7 @@ function TwoFactorAuth() {
     setIsLoading(true)
 
     try {
-      const response = await fetch('http://localhost:3001/api/auth/verify-otp', {
+      const response = await fetch('http://54.86.232.234:3000/api/auth/verify-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ function TwoFactorAuth() {
   const handleResendCode = async () => {
     setTimeLeft(30)
     try {
-      const response = await fetch('http://localhost:3001/api/auth/generate-otp', {
+      const response = await fetch('http://54.86.232.234:3000/api/auth/generate-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

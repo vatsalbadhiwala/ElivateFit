@@ -80,7 +80,7 @@ function AdminHome() {
         throw new Error('No authentication token found')
       }
 
-      const response = await fetch('http://localhost:3001/api/user/get-user', {
+      const response = await fetch('http://54.86.232.234:3000/api/user/get-user', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -122,7 +122,7 @@ function AdminHome() {
     try {
       console.log(userId);
       const token = localStorage.getItem('token')
-      const response = await fetch(`http://localhost:3001/api/user/deleteUserById/${userId}`, {
+      const response = await fetch(`http://54.86.232.234:3000/api/user/deleteUserById/${userId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
